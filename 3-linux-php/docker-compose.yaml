@@ -1,0 +1,16 @@
+services:
+  app-php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9003-9004:80
+    deploy:
+      replicas: 2
+    networks:
+      - app-php-network
+networks:
+  app-php-network:
+    driver: bridge
+volumes:
+  php-data:

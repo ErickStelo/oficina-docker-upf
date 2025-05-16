@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: bd-postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: master
+      POSTGRES_DB: bd_postgres
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: bd-pgadmin
+    ports:
+      - 9002:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+volumes:
+  postgres_data:
+  pgadmin_data:
