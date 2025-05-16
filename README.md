@@ -1,4 +1,4 @@
-# Comandos RESUMIDOS para instalar Docker e Docker Compose no Debian
+# Comandos para instalar Docker e Docker Compose no Linux
 
 1.  Desinstalar versões antigas (opcional, mas recomendado)
 
