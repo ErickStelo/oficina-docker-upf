@@ -1,15 +1,15 @@
 services:
   portainer:
-    image: portainer/portainer-cel:lts
+    image: portainer/portainer-ce:lts
     container_name: portainer
     ports:
-      - 9443:9443
+      - 9443:9443 # Acessar https://0.0.0.0:9443
       - 8000:8000
     volumes:
-      - portainer_data:/data
+      -  /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer_data:/data
     networks:
       - portainer_network
-
 networks:
   portainer_network:
     driver: bridge
