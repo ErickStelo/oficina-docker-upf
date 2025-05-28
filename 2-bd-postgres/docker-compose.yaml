@@ -12,7 +12,7 @@ services:
     image: dpage/pgadmin4
     container_name: bd-pgadmin
     ports:
-      - 9002:80
+      - 9092:80
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: admin

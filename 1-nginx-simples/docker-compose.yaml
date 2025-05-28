@@ -2,7 +2,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - 9001:80
+      - 9091:80
     volumes:
       - ./html:/usr/share/nginx/html
       - nginx_data:/var/lib/nginx
