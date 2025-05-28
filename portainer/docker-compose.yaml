@@ -1,0 +1,15 @@
+services:
+  portainer:
+    image: portainer/portainer-cel:lts
+    container_name: portainer
+    ports:
+      - 9443:9443
+      - 8000:8000
+    volumes:
+      - portainer_data:/data
+    networks:
+      - portainer_network
+
+networks:
+  portainer_network:
+    driver: bridge
